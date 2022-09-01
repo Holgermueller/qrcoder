@@ -1,23 +1,19 @@
 let qrcode = new QRCode("qrcode");
 
 const makeCode = () => {
+  qrcode.clear();
+
   const text = document.getElementById("text").value;
 
-  if (!text) {
-    alert("Input a text");
-    text.focus();
-    return;
-  }
+  new QRCode(document.getElementById("qrcode"), {
+    text: text,
+    width: "100",
+    height: "100",
+  });
 
-  qrcode.makeCode(text.value);
+  resetForm();
 };
 
-$("#text")
-  .on("blur", function () {
-    makeCode();
-  })
-  .on("keydown", function (e) {
-    if (e.keyCode == 13) {
-      makeCode();
-    }
-  });
+const resetForm = () => {
+  document.getElementById("text").value = "";
+};

@@ -5,12 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js"
+      integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./index.js" defer></script>
     <title>QR Generator</title>
   </head>
   <body>
-    <div class="form">
+    <div class="form" id="myForm">
       <label for="text-input">Input here:</label>
       <input id="text" type="text" />
+
+      <div class="error">
+        Please enter something into the field to generate a code.
+      </div>
+
       <select name="size" id="size">
         <option value=""></option>
         <option value=""></option>
@@ -19,14 +32,13 @@
       <button type="submit" onclick="makeCode()">Generate Code</button>
     </div>
 
-    <div id="qrcode">qrcode</div>
+    <div id="qrcode"></div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
-      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="./index.js"></script>
+    <footer>
+      <strong>
+        &copy; 2022 Holger Mueller | Built with
+        <a href="https://davidshimjs.github.io/qrcodejs/">qrcode.js</a>
+      </strong>
+    </footer>
   </body>
 </html>

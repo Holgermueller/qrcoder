@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
 
     <script
@@ -16,18 +22,23 @@
     <title>QR Generator</title>
   </head>
   <body>
+    <h1>QR Code Generator</h1>
     <div class="form" id="myForm">
-      <label for="text-input">Input here:</label>
+      <label for="text-input">Input URL here:</label>
       <input id="text" type="text" />
 
-      <div class="error">
-        Please enter something into the field to generate a code.
+      <div id="error">
+        Please enter a URL into the field to generate a code.
       </div>
 
-      <select name="size" id="size">
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
+      <label for="size">Select the size of your code:</label>
+      <select name="size" id="size" class="size">
+        <option value="100" selected>
+          100x100 (Great for business cards!)
+        </option>
+        <option value="200">200x200</option>
+        <option value="300">300x300</option>
+        <option value="400">400x400</option>
       </select>
       <button type="submit" onclick="makeCode()">Generate Code</button>
     </div>

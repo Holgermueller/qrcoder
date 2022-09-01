@@ -1,13 +1,40 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  text-align: center;
+  font-weight: 100;
+  font-size: 48px;
+}
+
 .form {
   width: 75%;
   margin: auto;
 }
 input[type="text"],
-button {
+button,
+.size {
   width: 100%;
   margin: 8px auto;
   padding: 16px;
 }
+#error {
+  display: none;
+  color: red;
+  text-align: center;
+}
+button {
+  font-size: larger;
+}
 #qrcode {
+  width: 55%;
+  height: 500px;
   margin: auto;
+  border: 1px solid black;
+}
+#qrcode > img {
+  padding: auto;
+}
+a {
+  text-decoration: none;
 }

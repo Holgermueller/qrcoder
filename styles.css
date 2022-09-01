@@ -1,0 +1,10 @@
+.form {
+  width: 75%;
+  margin: auto;
+}
+input[type="text"],
+button {
+  width: 100%;
+  margin: 8px auto;
+  padding: 16px;
+}

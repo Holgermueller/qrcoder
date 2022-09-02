@@ -14,6 +14,11 @@ const makeCode = () => {
       height: size,
     });
 
+    const successMessage = document.getElementById("successMessage");
+    successMessage.innerHTML = "Code Generated";
+
+    generateButton();
+
     hideError();
     resetForm();
   }
@@ -36,4 +41,13 @@ const showError = () => {
 
 const hideError = () => {
   error.style.display = "none";
+};
+
+const generateButton = () => {
+  const node = document.createElement("button");
+  const text = document.createTextNode("Copy to Clipboard");
+  node.appendChild(text);
+  node.classList.add("copy-button");
+
+  document.getElementById("btnDiv").appendChild(node);
 };

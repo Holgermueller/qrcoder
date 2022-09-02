@@ -17,6 +17,7 @@ button,
   width: 100%;
   margin: 8px auto;
   padding: 16px;
+  border-radius: 15px;
 }
 #error {
   display: none;
@@ -26,15 +27,29 @@ button,
 button {
   font-size: larger;
 }
-#qrcode {
-  width: 55%;
-  height: 500px;
+.qr-container {
+  width: 500px;
+  height: 300px;
+  justify-content: center;
   margin: auto;
   border: 1px solid black;
+  border-radius: 15px;
 }
-#qrcode > img {
-  padding: auto;
+#successMessage {
+  text-align: center;
+  font-size: 30px;
+  padding: 8px;
+}
+img {
+  margin: 50px auto;
+}
+.copy-button {
+  width: 85%;
 }
 a {
   text-decoration: none;
+}
+footer {
+  position: absolute;
+  bottom: 0;
 }

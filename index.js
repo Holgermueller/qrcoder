@@ -26,8 +26,10 @@ const makeCode = () => {
 
 const resetQRDIV = () => {
   const qrcode = document.getElementById("qrcode");
+  const node = document.getElementById("btnDiv");
 
   qrcode.innerHTML = "";
+  node.innerHTML = "";
 };
 
 const resetForm = () => {
@@ -48,6 +50,12 @@ const generateButton = () => {
   const text = document.createTextNode("Copy to Clipboard");
   node.appendChild(text);
   node.classList.add("copy-button");
+  node.setAttribute("id", "copyCode");
+  node.addEventListener("click", copyCode);
 
   document.getElementById("btnDiv").appendChild(node);
+};
+
+const copyCode = () => {
+  console.log("click");
 };

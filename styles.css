@@ -44,7 +44,7 @@ img {
   margin: 50px auto;
 }
 .copy-button {
-  width: 85%;
+  width: fit-content;
 }
 a {
   text-decoration: none;

@@ -1,3 +1,4 @@
+const qrcode = document.getElementById("qrcode");
 const error = document.getElementById("error");
 
 const makeCode = () => {
@@ -8,28 +9,48 @@ const makeCode = () => {
   if (text === "") {
     showError();
   } else {
-    new QRCode(document.getElementById("qrcode"), {
-      text: text,
-      width: size,
-      height: size,
-    });
+    showProcessing();
 
-    const successMessage = document.getElementById("successMessage");
-    successMessage.innerHTML = "Code Generated";
+    setTimeout(() => {
+      hideProcessing();
+      const successMessage = document.getElementById("successMessage");
+      successMessage.innerHTML = "Code Generated";
 
-    generateButton();
+      generateCode(text, size);
+      hideError();
+      resetForm();
 
-    hideError();
-    resetForm();
+      setTimeout(() => {
+        const saveUrl = qrcode.querySelector("img").src;
+        generateButton(saveUrl);
+      }, 50);
+    }, 1000);
   }
 };
 
+const generateCode = (text, size) => {
+  new QRCode(document.getElementById("qrcode"), {
+    text: text,
+    width: size,
+    height: size,
+  });
+};
+
 const resetQRDIV = () => {
-  const qrcode = document.getElementById("qrcode");
   const node = document.getElementById("btnDiv");
 
   qrcode.innerHTML = "";
   node.innerHTML = "";
+};
+
+const showProcessing = () => {
+  const proc = document.getElementById("processing");
+  proc.style.display = "block";
+};
+
+const hideProcessing = () => {
+  const proc = document.getElementById("processing");
+  proc.style.display = "none";
 };
 
 const resetForm = () => {
@@ -45,17 +66,17 @@ const hideError = () => {
   error.style.display = "none";
 };
 
-const generateButton = () => {
-  const node = document.createElement("button");
+const generateButton = (saveUrl) => {
+  const node = document.createElement("a");
   const text = document.createTextNode("Copy to Clipboard");
   node.appendChild(text);
   node.classList.add("copy-button");
-  node.setAttribute("id", "copyCode");
-  node.addEventListener("click", copyCode);
+  node.id = "copyCode";
+  node.href = saveUrl;
+  node.download = "qrcode";
 
   document.getElementById("btnDiv").appendChild(node);
+  console.log(node);
 };
 
-const copyCode = () => {
-  console.log("click");
-};
+hideProcessing();

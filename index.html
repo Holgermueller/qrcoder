@@ -34,18 +34,23 @@
       <label for="size">Select the size of your code:</label>
       <select name="size" id="size" class="size">
         <option value="100" selected>
-          100x100 (Great for business cards!)
+          100 X 100 (Great for business cards!)
         </option>
-        <option value="200">200x200</option>
-        <option value="300">300x300</option>
+        <option value="200">200 X 200</option>
+        <option value="300">300 X 300</option>
         <option value="400">
-          400x400 (May not render well on mobile devices.)
+          400 X 400 (May not render well on mobile devices.)
         </option>
+        <option value="500">500 X 500</option>
+        <option value="600">600 X 600</option>
+        <option value="700">700 X 700</option>
+        <option value="800">800 X 800 (Good for posters!)</option>
       </select>
       <button type="submit" onclick="makeCode()">Generate Code</button>
     </div>
 
     <div class="qr-container">
+      <div id="processing">Processing...</div>
       <div id="successMessage"></div>
       <div id="qrcode"></div>
 

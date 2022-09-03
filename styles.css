@@ -21,7 +21,7 @@ button,
 }
 #error {
   display: none;
-  color: red;
+  color: #b30000;
   text-align: center;
 }
 button {
@@ -31,6 +31,7 @@ button {
   width: 500px;
   height: 300px;
   justify-content: center;
+  text-align: center;
   margin: auto;
   border: 1px solid black;
   border-radius: 15px;
@@ -50,6 +51,6 @@ a {
   text-decoration: none;
 }
 footer {
-  position: absolute;
+  position: sticky;
   bottom: 0;
 }

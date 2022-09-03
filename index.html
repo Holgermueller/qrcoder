@@ -10,8 +10,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
 
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js"
       integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA=="
@@ -25,7 +32,7 @@
     <h1>QR Code Generator</h1>
     <div class="form" id="myForm">
       <label for="text-input">Input URL here:</label>
-      <input id="text" type="text" />
+      <input id="text" type="text" placeholder="Input URL here" />
 
       <div id="error">
         Please enter a URL into the field to generate a code.
@@ -50,7 +57,7 @@
     </div>
 
     <div class="qr-container">
-      <div id="processing">Processing...</div>
+      <div id="processing" class="processing">Processing...</div>
       <div id="successMessage"></div>
       <div id="qrcode"></div>
 
@@ -59,7 +66,18 @@
 
     <footer>
       <strong>
-        &copy; 2022 Holger Mueller | Built with
+        &copy; 2022 Holger Mueller
+        <a href="https://github.com/Holgermueller"
+          ><i class="fa-brands fa-github fa-lg"></i
+        ></a>
+        <a
+          href="https://stackoverflow.com/users/9111512/holger-mueller?tab=profile"
+          ><i class="fa-brands fa-stack-overflow fa-lg"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/holger-mueller-75855114a/"
+          ><i class="fa-brands fa-linkedin fa-lg"></i
+        ></a>
+        | Built with
         <a href="https://davidshimjs.github.io/qrcodejs/">qrcode.js</a>
       </strong>
     </footer>

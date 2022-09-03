@@ -33,8 +33,12 @@ button {
   justify-content: center;
   text-align: center;
   margin: auto;
-  border: 1px solid black;
-  border-radius: 15px;
+}
+.processing {
+  background-color: aqua;
+  height: 250px;
+  width: 250px;
+  text-align: center;
 }
 #successMessage {
   text-align: center;
@@ -46,11 +50,30 @@ img {
 }
 .copy-button {
   width: fit-content;
+  padding: 16px;
+  margin: 16px auto;
+  font-size: larger;
+  border: 1px solid black;
+  border-radius: 15px;
 }
 a {
   text-decoration: none;
 }
 footer {
-  position: sticky;
+  position: fixed;
+  left: 0;
   bottom: 0;
+  width: 100%;
+  padding: 6px;
+  text-align: center;
+}
+.copy {
+  float: left;
+}
+.socials {
+  float: right;
+  margin-right: 6px;
+}
+i {
+  padding: 4px;
 }

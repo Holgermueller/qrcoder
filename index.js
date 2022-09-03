@@ -1,5 +1,6 @@
 const qrcode = document.getElementById("qrcode");
 const error = document.getElementById("error");
+const successMessage = document.getElementById("successMessage");
 
 const makeCode = () => {
   const text = document.getElementById("text").value;
@@ -13,7 +14,7 @@ const makeCode = () => {
 
     setTimeout(() => {
       hideProcessing();
-      const successMessage = document.getElementById("successMessage");
+
       successMessage.innerHTML = "Code Generated";
 
       generateCode(text, size);
@@ -41,6 +42,7 @@ const resetQRDIV = () => {
 
   qrcode.innerHTML = "";
   node.innerHTML = "";
+  successMessage.innerHTML = "";
 };
 
 const showProcessing = () => {
@@ -76,7 +78,6 @@ const generateButton = (saveUrl) => {
   node.download = "qrcode";
 
   document.getElementById("btnDiv").appendChild(node);
-  console.log(node);
 };
 
 hideProcessing();

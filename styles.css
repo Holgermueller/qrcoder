@@ -36,6 +36,7 @@ button {
   width: 250px;
   text-align: center;
   margin: auto;
+  justify-content: center;
 }
 #successMessage {
   text-align: center;

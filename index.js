@@ -25,7 +25,7 @@ const makeCode = () => {
         const saveUrl = qrcode.querySelector("img").src;
         generateButton(saveUrl);
       }, 50);
-    }, 1000);
+    }, 3000);
   }
 };
 

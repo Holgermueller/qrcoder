@@ -31,6 +31,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
     <script src="./index.js" defer></script>
     <title>QR Generator</title>
   </head>
@@ -82,7 +84,37 @@
       <div class="row">
         <div class="col">
           <div class="qr-container">
-            <div id="processing" class="processing">Processing...</div>
+            <div id="processing" class="processing">
+              Processing...
+              <svg
+                class="blob-motion"
+                id="visual"
+                viewBox="0 0 200 200"
+                width="200"
+                height="200"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+              >
+                <g transform="translate(110.54711158041417 101.58109540429871)">
+                  <path
+                    id="blob1"
+                    d="M35.2 -39.7C43.5 -26.9 46.8 -13.4 47.6 0.8C48.4 15.1 46.8 30.2 38.5 40.2C30.2 50.2 15.1 55.1 -4.2 59.3C-23.6 63.6 -47.1 67.1 -58.8 57.1C-70.5 47.1 -70.2 23.6 -66.9 3.3C-63.6 -17 -57.3 -33.9 -45.6 -46.8C-33.9 -59.6 -17 -68.3 -1.8 -66.5C13.4 -64.8 26.9 -52.5 35.2 -39.7"
+                    fill="#001122"
+                  ></path>
+                </g>
+                <g
+                  transform="translate(87.82877931513431 92.5140376170087)"
+                  style="visibility: hidden"
+                >
+                  <path
+                    id="blob2"
+                    d="M40.7 -32.4C57.4 -24 78.7 -12 81.5 2.8C84.3 17.7 68.7 35.4 52 45.5C35.4 55.7 17.7 58.3 -1.5 59.9C-20.7 61.4 -41.5 61.8 -50.8 51.7C-60.2 41.5 -58.1 20.7 -54.1 4C-50.1 -12.7 -44.1 -25.5 -34.8 -33.8C-25.5 -42.1 -12.7 -46.1 -0.4 -45.7C12 -45.4 24 -40.7 40.7 -32.4"
+                    fill="#001122"
+                  ></path>
+                </g>
+              </svg>
+            </div>
             <div id="successMessage"></div>
             <div id="qrcode"></div>
 
@@ -114,5 +146,14 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const tween = KUTE.fromTo(
+        "#blob1",
+        { path: "#blob1" },
+        { path: "#blob2" },
+        { repeat: 999, duration: 500, yoyo: true }
+      ).start();
+    </script>
   </body>
 </html>

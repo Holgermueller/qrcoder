@@ -70,12 +70,17 @@ const hideError = () => {
 
 const generateButton = (saveUrl) => {
   const node = document.createElement("a");
-  const text = document.createTextNode("Copy to Clipboard");
+  const text = document.createTextNode("Download");
   node.appendChild(text);
   node.classList.add("copy-button");
   node.id = "copyCode";
   node.href = saveUrl;
   node.download = "qrcode";
+
+  const i = document.createElement("i");
+  i.classList.add("fa-solid", "fa-cloud-arrow-down");
+
+  node.appendChild(i);
 
   document.getElementById("btnDiv").appendChild(node);
 };

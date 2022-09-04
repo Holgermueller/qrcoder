@@ -8,7 +8,6 @@ h1 {
 }
 
 .form {
-  width: 75%;
   margin: auto;
 }
 input[type="text"],
@@ -28,8 +27,6 @@ button {
   font-size: larger;
 }
 .qr-container {
-  width: 500px;
-  height: 300px;
   justify-content: center;
   text-align: center;
   margin: auto;
@@ -39,6 +36,7 @@ button {
   height: 250px;
   width: 250px;
   text-align: center;
+  margin: auto;
 }
 #successMessage {
   text-align: center;
@@ -60,7 +58,7 @@ a {
   text-decoration: none;
 }
 footer {
-  position: fixed;
+  margin-top: 8px;
   left: 0;
   bottom: 0;
   width: 100%;

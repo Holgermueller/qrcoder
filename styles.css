@@ -29,7 +29,7 @@ button {
 .qr-container {
   justify-content: center;
   text-align: center;
-  margin: auto;
+  margin: 5% auto;
 }
 .processing {
   height: 250px;

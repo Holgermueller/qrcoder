@@ -1,0 +1,25 @@
+{
+  "name": "qrcoder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postcss:watch": "postcss styles.css --dir public --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Holgermueller/qrcoder.git"
+  },
+  "author": "Holger Mueller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Holgermueller/qrcoder/issues"
+  },
+  "homepage": "https://github.com/Holgermueller/qrcoder#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "cssnano": "^5.1.13",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0"
+  }
+}

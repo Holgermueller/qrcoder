@@ -46,15 +46,34 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 5% auto;
+  margin: 50px auto;
+  justify-content: center;
 }
 
 .box {
   animation: loader 1.25s infinite;
-  background-color: red;
-  width: 60px;
-  height: 60px;
-  color: #00136c;
+  background-color: #fff;
+  background-image: linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    ),
+    linear-gradient(
+      -45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    );
+  background-size: 10px 10px;
+  background-repeat: repeat;
+  width: 100px;
+  height: 100px;
+
   display: flex;
   justify-content: center;
   align-items: center;

@@ -32,8 +32,6 @@ button {
   margin: 5% auto;
 }
 .processing {
-  height: 250px;
-  width: 250px;
   text-align: center;
   margin: auto;
   justify-content: center;
@@ -43,6 +41,35 @@ button {
   font-size: 30px;
   padding: 8px;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 5% auto;
+}
+
+.box {
+  animation: loader 1.25s infinite;
+  background-color: red;
+  width: 60px;
+  height: 60px;
+  color: #00136c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes loader {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    border-radius: 50%;
+    rotate: 180deg;
+  }
+}
+
 img {
   margin: 50px auto;
 }

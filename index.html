@@ -84,8 +84,10 @@
         <div class="col">
           <div class="qr-container">
             <div id="processing" class="processing">
-              Processing...
-              <div id="canvas"></div>
+              <h2>Processing...</h2>
+              <div class="container">
+                <div class="box"></div>
+              </div>
             </div>
             <div id="successMessage"></div>
             <div id="qrcode"></div>
@@ -113,51 +115,5 @@
         <a href="https://davidshimjs.github.io/qrcodejs/">qrcode.js</a>
       </strong>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-      crossorigin="anonymous"
-    ></script>
-
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@0.144.0/build/three.module.js"
-        }
-      }
-    </script>
-
-    <script type="module">
-      import * as THREE from "three";
-
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(
-        75,
-        window.innerWidth / window.innerHeight,
-        0.1,
-        1000
-      );
-
-      const container = document.getElementById("canvas");
-      const renderer = new THREE.WebGLRenderer();
-      renderer.setSize(250, 400, false);
-      renderer.setClearColor(0xffffff);
-      container.appendChild(renderer.domElement);
-
-      const geometry = new THREE.BoxGeometry(3, 3, 3);
-      const material = new THREE.MeshBasicMaterial({ color: 0x000000 });
-      const cube = new THREE.Mesh(geometry, material);
-      scene.add(cube);
-      camera.position.z = 5;
-
-      function animate() {
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-
-        cube.rotation.x += 0.15;
-        cube.rotation.y += 0.15;
-      }
-      animate();
-    </script>
   </body>
 </html>
